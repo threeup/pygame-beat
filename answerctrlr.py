@@ -1,8 +1,11 @@
 ''' holds AnswerCtrlr class '''
 import pygame
 import json
-import cairosvg
 import io
+
+import os
+if os.name != 'nt':
+    import cairosvg
 
 
 from ctrlr import Ctrlr
@@ -19,8 +22,6 @@ class AnswerCtrlr(Ctrlr):
     def __init__(self):
         Ctrlr.__init__(self)
         self.answers = [None, None, None, None]
-        self.snd = pygame.mixer.Sound('pulse-sound.ogg')
-        self.snd.play()
         self.solved = set()
         
         filenames = ['basicdata.json','animalsdata.json','advanceddata.json','extradata.json']
@@ -34,33 +35,25 @@ class AnswerCtrlr(Ctrlr):
                 img = item["img"]
                 self.datadict[txt] = img
 
-    def load_svg(self, filename, _w, _h):
-        new_bites = cairosvg.svg2png(url = filename)
-        byte_io = io.BytesIO(new_bites)
-        return pygame.image.load(byte_io)
-
-    # def load_svg(self, filename, w, h):
-    #     svg = Parser.parse_file(filename)
-    #     rast = Rasterizer()
-    #     buff = rast.rasterize(svg, w, h)
-    #     return pygame.image.frombuffer(buff, (w, h), 'RGBA')
-
-    def checkAll(self, lines):
-        for i in range(len(lines)):
-            self.check(i, lines[i])
-
-    def check(self, idx, line):
-        line_spaces = line.lower().replace(' ', '_')
-        if line_spaces in self.datadict:
-            raw_img = self.load_svg(self.datadict[line_spaces], 512, 512)
-            prev = self.answers[idx]
-            self.answers[idx] = pygame.transform.scale(raw_img, (120, 120))
-            if line_spaces not in self.solved:
-                self.solved.add(line_spaces)
-            if prev is None:
-                self.snd.play()
+    def load_svg(self, filename, w, h):
+        if os.name == 'nt':
+            svg = Parser.parse_file(filename)
+            rast = Rasterizer()
+            buff = rast.rasterize(svg, w, h)
+            return pygame.image.frombuffer(buff, (w, h), 'RGBA')
         else:
-            self.answers[idx] = None
+            new_bites = cairosvg.svg2png(url = filename)
+            byte_io = io.BytesIO(new_bites)
+            return pygame.image.load(byte_io)
+
+
+    def check(self, idx, x):
+        raw_img = self.load_svg(self.datadict[x], 512, 512)
+        prev = self.answers[idx]
+        self.answers[idx] = pygame.transform.scale(raw_img, (120, 120))
+        if prev is None:
+            self.snd.play()
+
 
     def draw(self, screen, font_big):
         half_width = screen.get_width()/2

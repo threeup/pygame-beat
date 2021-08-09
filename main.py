@@ -7,8 +7,8 @@ from answerctrlr import AnswerCtrlr
 
 #os.putenv('SDL_FBDEV', '/dev/fb0')
 
-SCREEN_WIDTH = 1280
-SCREEN_HEIGHT = 800
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
 
 
 def main():
@@ -17,6 +17,12 @@ def main():
     pygame.mouse.set_visible(False)
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     screen.fill((0, 0, 0))
+    pygame.joystick.init()
+    joystick_count = pygame.joystick.get_count()
+    joysticks = [pygame.joystick.Joystick(x) for x in range(joystick_count)]
+    for j in range(joystick_count):
+        joysticks[j].init()
+
     pygame.display.update()
 
     # font stuff
