@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="350" height="350" viewBox="0 0 350 350" xml:space="preserve">
+<desc>Created with Fabric.js 1.7.22</desc>
+<defs>
+</defs>
+<g id="icon" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(-1.9444444444444287 -1.9444444444444287) scale(3.89 3.89)" >
+	<path d="M 37.583 65.104 c -1.024 0 -2.047 -0.391 -2.829 -1.172 L 17.381 46.558 c -1.562 -1.562 -1.562 -4.094 0 -5.657 c 1.563 -1.562 4.095 -1.562 5.657 0 l 14.545 14.545 l 29.379 -29.378 c 1.561 -1.562 4.094 -1.562 5.656 0 c 1.563 1.563 1.563 4.095 0 5.657 L 40.412 63.932 C 39.631 64.713 38.607 65.104 37.583 65.104 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+	<path d="M 86 90 H 4 c -2.209 0 -4 -1.791 -4 -4 V 4 c 0 -2.209 1.791 -4 4 -4 h 82 c 2.209 0 4 1.791 4 4 v 82 C 90 88.209 88.209 90 86 90 z M 8 82 h 74 V 8 H 8 V 82 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+</g>
+</svg>

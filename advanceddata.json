@@ -1,0 +1,1060 @@
+{
+  "elements": [
+    {
+      "text": "abacus",
+      "img": "./targetwords/advanced/abacus.svg"
+    },
+    {
+      "text": "air_hockey",
+      "img": "./targetwords/advanced/air_hockey.svg"
+    },
+    {
+      "text": "alert",
+      "img": "./targetwords/advanced/alert.svg"
+    },
+    {
+      "text": "apple_pie",
+      "img": "./targetwords/advanced/apple_pie.svg"
+    },
+    {
+      "text": "apron",
+      "img": "./targetwords/advanced/apron.svg"
+    },
+    {
+      "text": "arcade",
+      "img": "./targetwords/advanced/arcade.svg"
+    },
+    {
+      "text": "arcade_machine",
+      "img": "./targetwords/advanced/arcade_machine.svg"
+    },
+    {
+      "text": "archery",
+      "img": "./targetwords/advanced/archery.svg"
+    },
+    {
+      "text": "asteroid",
+      "img": "./targetwords/advanced/asteroid.svg"
+    },
+    {
+      "text": "axe",
+      "img": "./targetwords/advanced/axe.svg"
+    },
+    {
+      "text": "baby_bib",
+      "img": "./targetwords/advanced/baby_bib.svg"
+    },
+    {
+      "text": "baby_chair",
+      "img": "./targetwords/advanced/baby_chair.svg"
+    },
+    {
+      "text": "baby_feeder",
+      "img": "./targetwords/advanced/baby_feeder.svg"
+    },
+    {
+      "text": "baby_food",
+      "img": "./targetwords/advanced/baby_food.svg"
+    },
+    {
+      "text": "baby_powder",
+      "img": "./targetwords/advanced/baby_powder.svg"
+    },
+    {
+      "text": "baby_shoes",
+      "img": "./targetwords/advanced/baby_shoes.svg"
+    },
+    {
+      "text": "baby_shower",
+      "img": "./targetwords/advanced/baby_shower.svg"
+    },
+    {
+      "text": "baby_socks",
+      "img": "./targetwords/advanced/baby_socks.svg"
+    },
+    {
+      "text": "bacon",
+      "img": "./targetwords/advanced/bacon.svg"
+    },
+    {
+      "text": "balloons",
+      "img": "./targetwords/advanced/balloons.svg"
+    },
+    {
+      "text": "bar",
+      "img": "./targetwords/advanced/bar.svg"
+    },
+    {
+      "text": "bar_graph",
+      "img": "./targetwords/advanced/bar_graph.svg"
+    },
+    {
+      "text": "barrier",
+      "img": "./targetwords/advanced/barrier.svg"
+    },
+    {
+      "text": "basket",
+      "img": "./targetwords/advanced/basket.svg"
+    },
+    {
+      "text": "basting_brush",
+      "img": "./targetwords/advanced/basting_brush.svg"
+    },
+    {
+      "text": "bathtub",
+      "img": "./targetwords/advanced/bathtub.svg"
+    },
+    {
+      "text": "bbq_sauce",
+      "img": "./targetwords/advanced/bbq_sauce.svg"
+    },
+    {
+      "text": "beanie",
+      "img": "./targetwords/advanced/beanie.svg"
+    },
+    {
+      "text": "beer_bottle",
+      "img": "./targetwords/advanced/beer_bottle.svg"
+    },
+    {
+      "text": "best_price",
+      "img": "./targetwords/advanced/best_price.svg"
+    },
+    {
+      "text": "bill",
+      "img": "./targetwords/advanced/bill.svg"
+    },
+    {
+      "text": "billboard",
+      "img": "./targetwords/advanced/billboard.svg"
+    },
+    {
+      "text": "billiard",
+      "img": "./targetwords/advanced/billiard.svg"
+    },
+    {
+      "text": "block",
+      "img": "./targetwords/advanced/block.svg"
+    },
+    {
+      "text": "bomb",
+      "img": "./targetwords/advanced/bomb.svg"
+    },
+    {
+      "text": "bonfire",
+      "img": "./targetwords/advanced/bonfire.svg"
+    },
+    {
+      "text": "bottle",
+      "img": "./targetwords/advanced/bottle.svg"
+    },
+    {
+      "text": "bowling",
+      "img": "./targetwords/advanced/bowling.svg"
+    },
+    {
+      "text": "boxing_machine",
+      "img": "./targetwords/advanced/boxing_machine.svg"
+    },
+    {
+      "text": "bread",
+      "img": "./targetwords/advanced/bread.svg"
+    },
+    {
+      "text": "brochure",
+      "img": "./targetwords/advanced/brochure.svg"
+    },
+    {
+      "text": "budget",
+      "img": "./targetwords/advanced/budget.svg"
+    },
+    {
+      "text": "bullet",
+      "img": "./targetwords/advanced/bullet.svg"
+    },
+    {
+      "text": "bumper_car",
+      "img": "./targetwords/advanced/bumper_car.svg"
+    },
+    {
+      "text": "bunker",
+      "img": "./targetwords/advanced/bunker.svg"
+    },
+    {
+      "text": "burger",
+      "img": "./targetwords/advanced/burger.svg"
+    },
+    {
+      "text": "butterfly",
+      "img": "./targetwords/advanced/butterfly.svg"
+    },
+    {
+      "text": "cake",
+      "img": "./targetwords/advanced/cake.svg"
+    },
+    {
+      "text": "calendar",
+      "img": "./targetwords/advanced/calendar.svg"
+    },
+    {
+      "text": "camera",
+      "img": "./targetwords/advanced/camera.svg"
+    },
+    {
+      "text": "candle",
+      "img": "./targetwords/advanced/candle.svg"
+    },
+    {
+      "text": "cannon",
+      "img": "./targetwords/advanced/cannon.svg"
+    },
+    {
+      "text": "car_toy",
+      "img": "./targetwords/advanced/car_toy.svg"
+    },
+    {
+      "text": "castle",
+      "img": "./targetwords/advanced/castle.svg"
+    },
+    {
+      "text": "ceiling_lamp",
+      "img": "./targetwords/advanced/ceiling_lamp.svg"
+    },
+    {
+      "text": "charcoal",
+      "img": "./targetwords/advanced/charcoal.svg"
+    },
+    {
+      "text": "cheese",
+      "img": "./targetwords/advanced/cheese.svg"
+    },
+    {
+      "text": "chef",
+      "img": "./targetwords/advanced/chef.svg"
+    },
+    {
+      "text": "chef_hat",
+      "img": "./targetwords/advanced/chef_hat.svg"
+    },
+    {
+      "text": "chess",
+      "img": "./targetwords/advanced/chess.svg"
+    },
+    {
+      "text": "chess_piece",
+      "img": "./targetwords/advanced/chess_piece.svg"
+    },
+    {
+      "text": "chicken_leg",
+      "img": "./targetwords/advanced/chicken_leg.svg"
+    },
+    {
+      "text": "cleaver",
+      "img": "./targetwords/advanced/cleaver.svg"
+    },
+    {
+      "text": "clipboard",
+      "img": "./targetwords/advanced/clipboard.svg"
+    },
+    {
+      "text": "co2",
+      "img": "./targetwords/advanced/co2.svg"
+    },
+    {
+      "text": "coffee",
+      "img": "./targetwords/advanced/coffee.svg"
+    },
+    {
+      "text": "cold",
+      "img": "./targetwords/advanced/cold.svg"
+    },
+    {
+      "text": "computer",
+      "img": "./targetwords/advanced/computer.svg"
+    },
+    {
+      "text": "cookie",
+      "img": "./targetwords/advanced/cookie.svg"
+    },
+    {
+      "text": "cooking_pot",
+      "img": "./targetwords/advanced/cooking_pot.svg"
+    },
+    {
+      "text": "copywriting",
+      "img": "./targetwords/advanced/copywriting.svg"
+    },
+    {
+      "text": "corn",
+      "img": "./targetwords/advanced/corn.svg"
+    },
+    {
+      "text": "cot",
+      "img": "./targetwords/advanced/cot.svg"
+    },
+    {
+      "text": "coupon",
+      "img": "./targetwords/advanced/coupon.svg"
+    },
+    {
+      "text": "crayon",
+      "img": "./targetwords/advanced/crayon.svg"
+    },
+    {
+      "text": "crib_toy",
+      "img": "./targetwords/advanced/crib_toy.svg"
+    },
+    {
+      "text": "cubes",
+      "img": "./targetwords/advanced/cubes.svg"
+    },
+    {
+      "text": "cupcake",
+      "img": "./targetwords/advanced/cupcake.svg"
+    },
+    {
+      "text": "cutlery",
+      "img": "./targetwords/advanced/cutlery.svg"
+    },
+    {
+      "text": "cutting_board",
+      "img": "./targetwords/advanced/cutting_board.svg"
+    },
+    {
+      "text": "darts",
+      "img": "./targetwords/advanced/darts.svg"
+    },
+    {
+      "text": "diamond",
+      "img": "./targetwords/advanced/diamond.svg"
+    },
+    {
+      "text": "diaper",
+      "img": "./targetwords/advanced/diaper.svg"
+    },
+    {
+      "text": "dining_table",
+      "img": "./targetwords/advanced/dining_table.svg"
+    },
+    {
+      "text": "director_chair",
+      "img": "./targetwords/advanced/director_chair.svg"
+    },
+    {
+      "text": "domino",
+      "img": "./targetwords/advanced/domino.svg"
+    },
+    {
+      "text": "donut_shop",
+      "img": "./targetwords/advanced/donut_shop.svg"
+    },
+    {
+      "text": "drought",
+      "img": "./targetwords/advanced/drought.svg"
+    },
+    {
+      "text": "earthquake",
+      "img": "./targetwords/advanced/earthquake.svg"
+    },
+    {
+      "text": "email",
+      "img": "./targetwords/advanced/email.svg"
+    },
+    {
+      "text": "email_marketing",
+      "img": "./targetwords/advanced/email_marketing.svg"
+    },
+    {
+      "text": "fast_food",
+      "img": "./targetwords/advanced/fast_food.svg"
+    },
+    {
+      "text": "feeding_bottle",
+      "img": "./targetwords/advanced/feeding_bottle.svg"
+    },
+    {
+      "text": "fire_extinguisher",
+      "img": "./targetwords/advanced/fire_extinguisher.svg"
+    },
+    {
+      "text": "fire_truck",
+      "img": "./targetwords/advanced/fire_truck.svg"
+    },
+    {
+      "text": "fireplace",
+      "img": "./targetwords/advanced/fireplace.svg"
+    },
+    {
+      "text": "first_aid_kit",
+      "img": "./targetwords/advanced/first_aid_kit.svg"
+    },
+    {
+      "text": "fish",
+      "img": "./targetwords/advanced/fish.svg"
+    },
+    {
+      "text": "fish_tank",
+      "img": "./targetwords/advanced/fish_tank.svg"
+    },
+    {
+      "text": "flood",
+      "img": "./targetwords/advanced/flood.svg"
+    },
+    {
+      "text": "fork",
+      "img": "./targetwords/advanced/fork.svg"
+    },
+    {
+      "text": "fountain",
+      "img": "./targetwords/advanced/fountain.svg"
+    },
+    {
+      "text": "french_fries",
+      "img": "./targetwords/advanced/french_fries.svg"
+    },
+    {
+      "text": "game_controller",
+      "img": "./targetwords/advanced/game_controller.svg"
+    },
+    {
+      "text": "game_cube",
+      "img": "./targetwords/advanced/game_cube.svg"
+    },
+    {
+      "text": "game_over",
+      "img": "./targetwords/advanced/game_over.svg"
+    },
+    {
+      "text": "gamepad",
+      "img": "./targetwords/advanced/gamepad.svg"
+    },
+    {
+      "text": "gaming_console",
+      "img": "./targetwords/advanced/gaming_console.svg"
+    },
+    {
+      "text": "garland",
+      "img": "./targetwords/advanced/garland.svg"
+    },
+    {
+      "text": "gas",
+      "img": "./targetwords/advanced/gas.svg"
+    },
+    {
+      "text": "gift",
+      "img": "./targetwords/advanced/gift.svg"
+    },
+    {
+      "text": "glass",
+      "img": "./targetwords/advanced/glass.svg"
+    },
+    {
+      "text": "global_network",
+      "img": "./targetwords/advanced/global_network.svg"
+    },
+    {
+      "text": "global_warming",
+      "img": "./targetwords/advanced/global_warming.svg"
+    },
+    {
+      "text": "graph",
+      "img": "./targetwords/advanced/graph.svg"
+    },
+    {
+      "text": "grill",
+      "img": "./targetwords/advanced/grill.svg"
+    },
+    {
+      "text": "gun",
+      "img": "./targetwords/advanced/gun.svg"
+    },
+    {
+      "text": "hail",
+      "img": "./targetwords/advanced/hail.svg"
+    },
+    {
+      "text": "ham_leg",
+      "img": "./targetwords/advanced/ham_leg.svg"
+    },
+    {
+      "text": "headphones",
+      "img": "./targetwords/advanced/headphones.svg"
+    },
+    {
+      "text": "hot",
+      "img": "./targetwords/advanced/hot.svg"
+    },
+    {
+      "text": "hot_dog",
+      "img": "./targetwords/advanced/hot_dog.svg"
+    },
+    {
+      "text": "hurricane",
+      "img": "./targetwords/advanced/hurricane.svg"
+    },
+    {
+      "text": "ice_box",
+      "img": "./targetwords/advanced/ice_box.svg"
+    },
+    {
+      "text": "ice_cream",
+      "img": "./targetwords/advanced/ice_cream.svg"
+    },
+    {
+      "text": "iceberg",
+      "img": "./targetwords/advanced/iceberg.svg"
+    },
+    {
+      "text": "insert_coin",
+      "img": "./targetwords/advanced/insert_coin.svg"
+    },
+    {
+      "text": "investment",
+      "img": "./targetwords/advanced/investment.svg"
+    },
+    {
+      "text": "joystick",
+      "img": "./targetwords/advanced/joystick.svg"
+    },
+    {
+      "text": "kettle",
+      "img": "./targetwords/advanced/kettle.svg"
+    },
+    {
+      "text": "knife",
+      "img": "./targetwords/advanced/knife.svg"
+    },
+    {
+      "text": "landslide",
+      "img": "./targetwords/advanced/landslide.svg"
+    },
+    {
+      "text": "landslip",
+      "img": "./targetwords/advanced/landslip.svg"
+    },
+    {
+      "text": "light_bulb",
+      "img": "./targetwords/advanced/light_bulb.svg"
+    },
+    {
+      "text": "like",
+      "img": "./targetwords/advanced/like.svg"
+    },
+    {
+      "text": "locust",
+      "img": "./targetwords/advanced/locust.svg"
+    },
+    {
+      "text": "lollipop",
+      "img": "./targetwords/advanced/lollipop.svg"
+    },
+    {
+      "text": "magazine",
+      "img": "./targetwords/advanced/magazine.svg"
+    },
+    {
+      "text": "market_research",
+      "img": "./targetwords/advanced/market_research.svg"
+    },
+    {
+      "text": "marshmallows",
+      "img": "./targetwords/advanced/marshmallows.svg"
+    },
+    {
+      "text": "matches",
+      "img": "./targetwords/advanced/matches.svg"
+    },
+    {
+      "text": "medical_assistance",
+      "img": "./targetwords/advanced/medical_assistance.svg"
+    },
+    {
+      "text": "megaphone",
+      "img": "./targetwords/advanced/megaphone.svg"
+    },
+    {
+      "text": "meteor",
+      "img": "./targetwords/advanced/meteor.svg"
+    },
+    {
+      "text": "mini_train",
+      "img": "./targetwords/advanced/mini_train.svg"
+    },
+    {
+      "text": "mixer",
+      "img": "./targetwords/advanced/mixer.svg"
+    },
+    {
+      "text": "mobile_marketing",
+      "img": "./targetwords/advanced/mobile_marketing.svg"
+    },
+    {
+      "text": "money_growth",
+      "img": "./targetwords/advanced/money_growth.svg"
+    },
+    {
+      "text": "money_transfer",
+      "img": "./targetwords/advanced/money_transfer.svg"
+    },
+    {
+      "text": "mouse",
+      "img": "./targetwords/advanced/mouse.svg"
+    },
+    {
+      "text": "muffin",
+      "img": "./targetwords/advanced/muffin.svg"
+    },
+    {
+      "text": "newborn",
+      "img": "./targetwords/advanced/newborn.svg"
+    },
+    {
+      "text": "newspaper",
+      "img": "./targetwords/advanced/newspaper.svg"
+    },
+    {
+      "text": "no_smoking",
+      "img": "./targetwords/advanced/no_smoking.svg"
+    },
+    {
+      "text": "noodles",
+      "img": "./targetwords/advanced/noodles.svg"
+    },
+    {
+      "text": "notes",
+      "img": "./targetwords/advanced/notes.svg"
+    },
+    {
+      "text": "nuclear",
+      "img": "./targetwords/advanced/nuclear.svg"
+    },
+    {
+      "text": "onion",
+      "img": "./targetwords/advanced/onion.svg"
+    },
+    {
+      "text": "organization_chart",
+      "img": "./targetwords/advanced/organization_chart.svg"
+    },
+    {
+      "text": "oven",
+      "img": "./targetwords/advanced/oven.svg"
+    },
+    {
+      "text": "oven_mitts",
+      "img": "./targetwords/advanced/oven_mitts.svg"
+    },
+    {
+      "text": "pacifier",
+      "img": "./targetwords/advanced/pacifier.svg"
+    },
+    {
+      "text": "paper_ship",
+      "img": "./targetwords/advanced/paper_ship.svg"
+    },
+    {
+      "text": "paprika",
+      "img": "./targetwords/advanced/paprika.svg"
+    },
+    {
+      "text": "party_hat",
+      "img": "./targetwords/advanced/party_hat.svg"
+    },
+    {
+      "text": "pay_per_click",
+      "img": "./targetwords/advanced/pay_per_click.svg"
+    },
+    {
+      "text": "phone_call",
+      "img": "./targetwords/advanced/phone_call.svg"
+    },
+    {
+      "text": "pie_chart",
+      "img": "./targetwords/advanced/pie_chart.svg"
+    },
+    {
+      "text": "pijama",
+      "img": "./targetwords/advanced/pijama.svg"
+    },
+    {
+      "text": "pizza",
+      "img": "./targetwords/advanced/pizza.svg"
+    },
+    {
+      "text": "placeholder",
+      "img": "./targetwords/advanced/placeholder.svg"
+    },
+    {
+      "text": "pollution",
+      "img": "./targetwords/advanced/pollution.svg"
+    },
+    {
+      "text": "pot_holder",
+      "img": "./targetwords/advanced/pot_holder.svg"
+    },
+    {
+      "text": "pram",
+      "img": "./targetwords/advanced/pram.svg"
+    },
+    {
+      "text": "prawn",
+      "img": "./targetwords/advanced/prawn.svg"
+    },
+    {
+      "text": "puzzle",
+      "img": "./targetwords/advanced/puzzle.svg"
+    },
+    {
+      "text": "quality",
+      "img": "./targetwords/advanced/quality.svg"
+    },
+    {
+      "text": "rain",
+      "img": "./targetwords/advanced/rain.svg"
+    },
+    {
+      "text": "ranking",
+      "img": "./targetwords/advanced/ranking.svg"
+    },
+    {
+      "text": "rattle",
+      "img": "./targetwords/advanced/rattle.svg"
+    },
+    {
+      "text": "red_cross",
+      "img": "./targetwords/advanced/red_cross.svg"
+    },
+    {
+      "text": "restaurant",
+      "img": "./targetwords/advanced/restaurant.svg"
+    },
+    {
+      "text": "review",
+      "img": "./targetwords/advanced/review.svg"
+    },
+    {
+      "text": "ribs",
+      "img": "./targetwords/advanced/ribs.svg"
+    },
+    {
+      "text": "rice",
+      "img": "./targetwords/advanced/rice.svg"
+    },
+    {
+      "text": "road",
+      "img": "./targetwords/advanced/road.svg"
+    },
+    {
+      "text": "roast_chicken",
+      "img": "./targetwords/advanced/roast_chicken.svg"
+    },
+    {
+      "text": "rocking_horse",
+      "img": "./targetwords/advanced/rocking_horse.svg"
+    },
+    {
+      "text": "rolling_pin",
+      "img": "./targetwords/advanced/rolling_pin.svg"
+    },
+    {
+      "text": "rubber_duck",
+      "img": "./targetwords/advanced/rubber_duck.svg"
+    },
+    {
+      "text": "safety_pin",
+      "img": "./targetwords/advanced/safety_pin.svg"
+    },
+    {
+      "text": "salmon",
+      "img": "./targetwords/advanced/salmon.svg"
+    },
+    {
+      "text": "salt",
+      "img": "./targetwords/advanced/salt.svg"
+    },
+    {
+      "text": "salt_and_pepper",
+      "img": "./targetwords/advanced/salt_and_pepper.svg"
+    },
+    {
+      "text": "sand_storm",
+      "img": "./targetwords/advanced/sand_storm.svg"
+    },
+    {
+      "text": "sauces",
+      "img": "./targetwords/advanced/sauces.svg"
+    },
+    {
+      "text": "sausages",
+      "img": "./targetwords/advanced/sausages.svg"
+    },
+    {
+      "text": "serving_dish",
+      "img": "./targetwords/advanced/serving_dish.svg"
+    },
+    {
+      "text": "share",
+      "img": "./targetwords/advanced/share.svg"
+    },
+    {
+      "text": "shield",
+      "img": "./targetwords/advanced/shield.svg"
+    },
+    {
+      "text": "shipwreck",
+      "img": "./targetwords/advanced/shipwreck.svg"
+    },
+    {
+      "text": "shooting_game",
+      "img": "./targetwords/advanced/shooting_game.svg"
+    },
+    {
+      "text": "shopping_bag",
+      "img": "./targetwords/advanced/shopping_bag.svg"
+    },
+    {
+      "text": "shopping_cart",
+      "img": "./targetwords/advanced/shopping_cart.svg"
+    },
+    {
+      "text": "sign_post",
+      "img": "./targetwords/advanced/sign_post.svg"
+    },
+    {
+      "text": "skewer",
+      "img": "./targetwords/advanced/skewer.svg"
+    },
+    {
+      "text": "skewers",
+      "img": "./targetwords/advanced/skewers.svg"
+    },
+    {
+      "text": "skull",
+      "img": "./targetwords/advanced/skull.svg"
+    },
+    {
+      "text": "slot_machine",
+      "img": "./targetwords/advanced/slot_machine.svg"
+    },
+    {
+      "text": "snake",
+      "img": "./targetwords/advanced/snake.svg"
+    },
+    {
+      "text": "snooker",
+      "img": "./targetwords/advanced/snooker.svg"
+    },
+    {
+      "text": "snow",
+      "img": "./targetwords/advanced/snow.svg"
+    },
+    {
+      "text": "snow_avalanche",
+      "img": "./targetwords/advanced/snow_avalanche.svg"
+    },
+    {
+      "text": "snowing",
+      "img": "./targetwords/advanced/snowing.svg"
+    },
+    {
+      "text": "soap",
+      "img": "./targetwords/advanced/soap.svg"
+    },
+    {
+      "text": "soft_drink",
+      "img": "./targetwords/advanced/soft_drink.svg"
+    },
+    {
+      "text": "soup",
+      "img": "./targetwords/advanced/soup.svg"
+    },
+    {
+      "text": "spaceship",
+      "img": "./targetwords/advanced/spaceship.svg"
+    },
+    {
+      "text": "spatula",
+      "img": "./targetwords/advanced/spatula.svg"
+    },
+    {
+      "text": "speech_bubble",
+      "img": "./targetwords/advanced/speech_bubble.svg"
+    },
+    {
+      "text": "startup",
+      "img": "./targetwords/advanced/startup.svg"
+    },
+    {
+      "text": "steak",
+      "img": "./targetwords/advanced/steak.svg"
+    },
+    {
+      "text": "steering_wheel",
+      "img": "./targetwords/advanced/steering_wheel.svg"
+    },
+    {
+      "text": "stove",
+      "img": "./targetwords/advanced/stove.svg"
+    },
+    {
+      "text": "success",
+      "img": "./targetwords/advanced/success.svg"
+    },
+    {
+      "text": "suitcase",
+      "img": "./targetwords/advanced/suitcase.svg"
+    },
+    {
+      "text": "supplies",
+      "img": "./targetwords/advanced/supplies.svg"
+    },
+    {
+      "text": "sushi",
+      "img": "./targetwords/advanced/sushi.svg"
+    },
+    {
+      "text": "sword",
+      "img": "./targetwords/advanced/sword.svg"
+    },
+    {
+      "text": "table",
+      "img": "./targetwords/advanced/table.svg"
+    },
+    {
+      "text": "table_football",
+      "img": "./targetwords/advanced/table_football.svg"
+    },
+    {
+      "text": "target",
+      "img": "./targetwords/advanced/target.svg"
+    },
+    {
+      "text": "target_audience",
+      "img": "./targetwords/advanced/target_audience.svg"
+    },
+    {
+      "text": "teddy_bear",
+      "img": "./targetwords/advanced/teddy_bear.svg"
+    },
+    {
+      "text": "telemarketing",
+      "img": "./targetwords/advanced/telemarketing.svg"
+    },
+    {
+      "text": "tetris",
+      "img": "./targetwords/advanced/tetris.svg"
+    },
+    {
+      "text": "three_in_a_row",
+      "img": "./targetwords/advanced/three_in_a_row.svg"
+    },
+    {
+      "text": "thunder",
+      "img": "./targetwords/advanced/thunder.svg"
+    },
+    {
+      "text": "thunderstorm",
+      "img": "./targetwords/advanced/thunderstorm.svg"
+    },
+    {
+      "text": "tomato",
+      "img": "./targetwords/advanced/tomato.svg"
+    },
+    {
+      "text": "tongs",
+      "img": "./targetwords/advanced/tongs.svg"
+    },
+    {
+      "text": "torch",
+      "img": "./targetwords/advanced/torch.svg"
+    },
+    {
+      "text": "treasure_chest",
+      "img": "./targetwords/advanced/treasure_chest.svg"
+    },
+    {
+      "text": "treasure_map",
+      "img": "./targetwords/advanced/treasure_map.svg"
+    },
+    {
+      "text": "trophy",
+      "img": "./targetwords/advanced/trophy.svg"
+    },
+    {
+      "text": "tsunami",
+      "img": "./targetwords/advanced/tsunami.svg"
+    },
+    {
+      "text": "twister",
+      "img": "./targetwords/advanced/twister.svg"
+    },
+    {
+      "text": "ufo",
+      "img": "./targetwords/advanced/ufo.svg"
+    },
+    {
+      "text": "video_game",
+      "img": "./targetwords/advanced/video_game.svg"
+    },
+    {
+      "text": "video_player",
+      "img": "./targetwords/advanced/video_player.svg"
+    },
+    {
+      "text": "viral_marketing",
+      "img": "./targetwords/advanced/viral_marketing.svg"
+    },
+    {
+      "text": "virus",
+      "img": "./targetwords/advanced/virus.svg"
+    },
+    {
+      "text": "vision",
+      "img": "./targetwords/advanced/vision.svg"
+    },
+    {
+      "text": "volcano",
+      "img": "./targetwords/advanced/volcano.svg"
+    },
+    {
+      "text": "walkie_talkie",
+      "img": "./targetwords/advanced/walkie_talkie.svg"
+    },
+    {
+      "text": "wall_clock",
+      "img": "./targetwords/advanced/wall_clock.svg"
+    },
+    {
+      "text": "warning",
+      "img": "./targetwords/advanced/warning.svg"
+    },
+    {
+      "text": "whack_a_mole",
+      "img": "./targetwords/advanced/whack_a_mole.svg"
+    },
+    {
+      "text": "wheel_of_fortune",
+      "img": "./targetwords/advanced/wheel_of_fortune.svg"
+    },
+    {
+      "text": "whisk",
+      "img": "./targetwords/advanced/whisk.svg"
+    },
+    {
+      "text": "wildfire",
+      "img": "./targetwords/advanced/wildfire.svg"
+    },
+    {
+      "text": "wind_socket",
+      "img": "./targetwords/advanced/wind_socket.svg"
+    },
+    {
+      "text": "wine",
+      "img": "./targetwords/advanced/wine.svg"
+    },
+    {
+      "text": "wine_menu",
+      "img": "./targetwords/advanced/wine_menu.svg"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "elements": [
+    {
+      "text": "bill",
+      "img": "./targetwords/extra/bill.svg"
+    },
+    {
+      "text": "cheese",
+      "img": "./targetwords/extra/cheese.svg"
+    },
+    {
+      "text": "chef",
+      "img": "./targetwords/extra/chef.svg"
+    },
+    {
+      "text": "chicken_leg",
+      "img": "./targetwords/extra/chicken_leg.svg"
+    },
+    {
+      "text": "cutlery",
+      "img": "./targetwords/extra/cutlery.svg"
+    },
+    {
+      "text": "cutting_board",
+      "img": "./targetwords/extra/cutting_board.svg"
+    },
+    {
+      "text": "french_fries",
+      "img": "./targetwords/extra/french_fries.svg"
+    },
+    {
+      "text": "hot_dog",
+      "img": "./targetwords/extra/hot_dog.svg"
+    },
+    {
+      "text": "ice_cream",
+      "img": "./targetwords/extra/ice_cream.svg"
+    },
+    {
+      "text": "table",
+      "img": "./targetwords/extra/table.svg"
+    },
+    {
+      "text": "target",
+      "img": "./targetwords/extra/target.svg"
+    },
+    {
+      "text": "trophy",
+      "img": "./targetwords/extra/trophy.svg"
+    }
+  ]
+}

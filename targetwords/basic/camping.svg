@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="350" height="350" viewBox="0 0 350 350" xml:space="preserve">
+<desc>Created with Fabric.js 1.7.22</desc>
+<defs>
+</defs>
+<g id="icon" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(-1.9444444444444287 -1.9444444444444287) scale(3.89 3.89)" >
+	<polygon points="26.02,83.25 26.02,58.33 20.97,58.33 20.97,87.78 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(221,139,40); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+	<polygon points="67.64,76.07 67.64,54.66 71.99,54.66 71.99,79.96 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(221,139,40); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+	<polygon points="44.4,53.52 30.88,26.56 38.42,26.56 23.41,0.59 8.39,26.56 15.93,26.56 0,58.33 23.47,58.33 23.34,58.33 41.21,58.33 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(170,217,98); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+	<polygon points="51.86,50.53 63.47,27.36 57,27.36 69.89,5.05 82.79,27.36 76.31,27.36 90,54.66 69.83,54.66 69.95,54.66 54.6,54.66 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(170,217,98); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+	<path d="M 78.257 88.371 C 66.852 73.213 57.166 57.803 49.286 42.13 c -0.239 -0.476 -0.906 -0.475 -1.146 0.001 c -8.102 16.033 -17.855 31.409 -28.972 46.243 c -0.322 0.429 -0.019 1.039 0.517 1.039 h 58.057 C 78.279 89.412 78.58 88.8 78.257 88.371 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(247,89,89); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+	<path d="M 59.645 84.275 c -4.78 -6.589 -8.001 -15.128 -10.631 -24.406 c -0.086 -0.305 -0.512 -0.305 -0.598 0 c -2.63 9.279 -5.851 17.817 -10.631 24.406 c -0.15 0.207 -0.006 0.492 0.251 0.492 h 21.359 C 59.651 84.767 59.795 84.482 59.645 84.275 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,222,85); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+</g>
+</svg>
