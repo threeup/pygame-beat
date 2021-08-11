@@ -1,8 +1,10 @@
+from worldctrlr import WorldCtrlr
 import pygame
 import os
 from bossctrlr import BossCtrlr
 from humanctrlr import HumanCtrlr
-from answerctrlr import AnswerCtrlr
+from worldctrlr import WorldCtrlr
+from musicctrlr import MusicCtrlr
 
 
 #os.putenv('SDL_FBDEV', '/dev/fb0')
@@ -25,18 +27,12 @@ def main():
 
     pygame.display.update()
 
-    # font stuff
-    font_big = pygame.font.Font(None, 140)
-
-    # bg stuff
-    raw_bg_img = pygame.image.load("bg.jpg")
-    bg_img = pygame.transform.scale(
-        raw_bg_img, (SCREEN_WIDTH, SCREEN_HEIGHT))
-
     # controller
     human = HumanCtrlr()
-    answer = AnswerCtrlr()
     boss = BossCtrlr()
+    world = WorldCtrlr()
+    music = MusicCtrlr()
+    world.setup(SCREEN_WIDTH, SCREEN_HEIGHT)
 
     while boss.running:
         # Scan the buttons
@@ -44,20 +40,39 @@ def main():
             boss.handle_event(event)
             human.handle_event(event)
 
-        if human.dirty:
-            answer.checkAll(human.lines)
+
+        if human.dirty_beat:
+            row = human.current_row
+            step = human.current_beat
+            val = world.read(row,step)
+            for idx in range(human.button_count):
+                if human.pressed[idx]:
+                    world.mark(row,step,idx)
+                    music.play(idx)
+                elif val & (1 << idx):
+                    music.play(idx)
+                else:
+                    music.stop(idx)
+        elif human.dirty_button:
+            row = human.current_row
+            step = human.current_beat
+            world.clear(row,step)
+            for idx in range(human.button_count):
+                if human.pressed[idx]:
+                    music.play(idx)
+                    world.mark(row,step,idx)
+
 
         
         delta = 1.0 / 60.0
         steps = 1
         for _ in range(steps):
+            world.tick(delta)
             human.tick(delta)
 
         # Draw stuff
-        screen.blit(bg_img, (0, 0))
-        
-        human.draw(screen, font_big)
-        answer.draw(screen, font_big)
+        world.draw(screen)
+        human.draw(screen)
 
         pygame.display.update()
 

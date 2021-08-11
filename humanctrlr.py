@@ -1,6 +1,29 @@
 ''' holds HumanCtrlr class '''
+from math import sin, cos, pi, floor
 import pygame
 from ctrlr import Ctrlr
+
+
+def draw_polygon(surface, color, vertex_count, radius, position):
+    n, r = vertex_count, radius
+    x, y = position
+    verts = []
+    for i in range(n):
+        deg = 2 * pi * i / n + 0.125*pi
+        verts.append((x + r * cos(deg), y + r * sin(deg)))
+    pygame.draw.polygon(surface, color, verts)
+
+
+def draw_polygon_outline(surface, color, vertex_count, radius, position):
+
+    n, r = vertex_count, radius
+    x, y = position
+    verts = []
+    for i in range(n):
+        deg = 2 * pi * i / n + 0.125*pi
+        verts.append((x + r * cos(deg), y + r * sin(deg)))
+
+    pygame.draw.lines(surface, color, True, verts, 4)
 
 
 class HumanCtrlr(Ctrlr):
@@ -8,61 +31,45 @@ class HumanCtrlr(Ctrlr):
     A class which manipulates controlled entities
     '''
 
-    def __init__(self):    
-        Ctrlr.__init__(self)  
+    def __init__(self):
+        Ctrlr.__init__(self)
         self.pressed = []
-        self.released = []
-        self.snd = []
-        self.img = []
-        count = 4
-        for _ in range(count):
-            self.pressed.append(0)
-            self.released.append(0)
-        self.snd.append(pygame.mixer.Sound('pulse-motive-2.ogg'))
-        self.snd.append(pygame.mixer.Sound('pulse-motive-3.ogg'))
-        self.snd.append(pygame.mixer.Sound('pulse-thing-2.ogg'))
-        self.snd.append(pygame.mixer.Sound('pulse-motive-4.ogg'))
-        self.img.append(pygame.image.load('hoopred.png'))
-        self.img.append(pygame.image.load('hoopyellow.png'))
-        self.img.append(pygame.image.load('hoopgreen.png'))
-        self.img.append(pygame.image.load('hoopblue.png'))
-        
-        for i in range(count):
-            self.snd[i].set_volume(0.01)
-            self.img[i] = pygame.transform.scale(self.img[i], (150,150))
-        self.dark_mode = False
-        self.alive_time = 0
-        self.dirty = False
-    
-    def handle_event(self, event):
-        count = 4
-        if event.type == pygame.JOYBUTTONDOWN:
-            for i in range(count):
-                if event.button == i:
-                    self.pressed[i] = self.alive_time
-                    if self.released[i] > 2000:
-                        self.snd[i].stop()
-                        self.released[i] = 0
-        elif event.type == pygame.JOYBUTTONUP:
-            for i in range(count):
-                if event.button == i:
-                    self.released[i] = self.alive_time - self.pressed[i]
-                    if self.released[i] > 2000:
-                        print(self.released[i])
-                        self.snd[i].play()
-                    self.pressed[i] = 0
-        
+        self.current_row = 0
+        self.current_beat = 0
+        self.button_count = 4
+        self.beat_time = 0
+        self.dirty_button = False
+        self.dirty_beat = False
+        self.beat_duration = 2000
+        for _ in range(self.button_count):
+            self.pressed.append(False)
 
-    def draw(self, screen, font_big):
-        self.dirty = False
-        count = 4
-        for i in range(count):
-            if self.pressed[i] > 0:
-                draw_x = 100+i*100
-                draw_y = 100
-                screen.blit(self.img[i], (draw_x, draw_y))
-        
+    def handle_event(self, event):
+        button_count = 4
+        if event.type == pygame.JOYBUTTONDOWN:
+            for idx in range(button_count):
+                if event.button == idx:
+                    self.pressed[idx] = True
+                    self.dirty_button = True
+        elif event.type == pygame.JOYBUTTONUP:
+            for idx in range(button_count):
+                if event.button == idx:
+                    self.pressed[idx] = False
+
+    def draw(self, screen):
+        active_rows = 1
+        for idx in range(active_rows):
+            # x = self.beat_time*44/self.beat_duration + idx*22
+            x = 48+self.beat_time*46/self.beat_duration
+            y = 500-idx*46
+            draw_polygon_outline(screen, (255, 255, 255), 8, 24, (x, y))
 
     def tick(self, delta):
-        self.alive_time = round(self.alive_time + delta*1000)
-        return
+        last_beat = round(self.beat_time/self.beat_duration)
+        self.beat_time += delta*1000
+        if self.beat_time >= 16*self.beat_duration:
+            self.beat_time -= 16*self.beat_duration
+        self.current_beat = floor(self.beat_time/self.beat_duration)
+
+        if last_beat != self.current_beat:
+            self.dirty_beat = True

@@ -1,4 +1,4 @@
-''' holds HumanCtrlr class '''
+''' holds BossCtrlr class '''
 import pygame
 from ctrlr import Ctrlr
 
