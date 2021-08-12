@@ -48,8 +48,11 @@ class WorldCtrlr(Ctrlr):
                 if val & 1:
                     color[0]=200
                 if val & 2:
-                    color[1]=200
+                    color[0]=150
+                    color[1]=150
                 if val & 4:
+                    color[1]=200
+                if val & 8:
                     color[2]=200
                 draw_polygon(screen, tuple(color), 8, 24, (x, y))
 

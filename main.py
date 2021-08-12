@@ -50,12 +50,12 @@ def main():
 
         if human.dirty_iteration:
             print(human.iteration)
-            if human.iteration % 12 == 0:
+            if human.iteration % 16 == 0:
                 world.clearall()
             if human.iteration % 2 == 0:
-                human.current_row = (human.current_row + 1) % 3
+                human.current_row = (human.current_row + 1) % 8
                 music.stopall()
-                music.load_sounds(human.current_row)
+                music.load_sounds(human.current_row % 3)
             
 
         if human.dirty_beat:

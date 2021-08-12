@@ -15,23 +15,23 @@ class MusicCtrlr(Ctrlr):
         self.current_sounds = []
         self.is_playing = []
         if(bank == 0):
-            self.current_sounds.append(pygame.mixer.Sound('clap.ogg'))
-            self.current_sounds.append(pygame.mixer.Sound('bassdrum.ogg'))
-            self.current_sounds.append(pygame.mixer.Sound('cymbal.ogg'))
-            self.current_sounds.append(pygame.mixer.Sound('electricsnare.ogg'))
+            self.current_sounds.append(pygame.mixer.Sound('audio/clap.ogg'))
+            self.current_sounds.append(pygame.mixer.Sound('audio/bassdrum.ogg'))
+            self.current_sounds.append(pygame.mixer.Sound('audio/cymbal.ogg'))
+            self.current_sounds.append(pygame.mixer.Sound('audio/electricsnare.ogg'))
         elif(bank== 1):
-            self.current_sounds.append(pygame.mixer.Sound('acousticsnare.ogg'))
-            self.current_sounds.append(pygame.mixer.Sound('cabasa.ogg'))
-            self.current_sounds.append(pygame.mixer.Sound('closehihat.ogg'))
-            self.current_sounds.append(pygame.mixer.Sound('hiconga.ogg'))
+            self.current_sounds.append(pygame.mixer.Sound('audio/acousticsnare.ogg'))
+            self.current_sounds.append(pygame.mixer.Sound('audio/cabasa.ogg'))
+            self.current_sounds.append(pygame.mixer.Sound('audio/closehihat.ogg'))
+            self.current_sounds.append(pygame.mixer.Sound('audio/hiconga.ogg'))
         else:
-            self.current_sounds.append(pygame.mixer.Sound('bassdrum.ogg'))
-            self.current_sounds.append(pygame.mixer.Sound('pedalhihat.ogg'))
-            self.current_sounds.append(pygame.mixer.Sound('closehihat.ogg'))
-            self.current_sounds.append(pygame.mixer.Sound('cymbal.ogg'))
+            self.current_sounds.append(pygame.mixer.Sound('audio/bassdrum.ogg'))
+            self.current_sounds.append(pygame.mixer.Sound('audio/pedalhihat.ogg'))
+            self.current_sounds.append(pygame.mixer.Sound('audio/closehihat.ogg'))
+            self.current_sounds.append(pygame.mixer.Sound('audio/cymbal.ogg'))
         
         for idx in range(len(self.current_sounds)):
-            self.current_sounds[idx].set_volume(0.1)
+            self.current_sounds[idx].set_volume(0.25)
             self.is_playing.append(False)
     
 
