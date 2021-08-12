@@ -59,5 +59,10 @@ class WorldCtrlr(Ctrlr):
     def clear(self, row, step):
         self.grid[row][step] = 0
 
+    def clearall(self):
+        for row in range(self.rows):
+            for step in range(self.steps):
+                self.clear(row, step)
+
     def read(self, row, step):
         return self.grid[row][step]

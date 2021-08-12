@@ -38,8 +38,10 @@ class HumanCtrlr(Ctrlr):
         self.current_beat = 0
         self.button_count = 4
         self.beat_time = 0
+        self.iteration = 0
         self.dirty_button = False
         self.dirty_beat = False
+        self.dirty_iteration = False
         self.beat_duration = 2000
         for _ in range(self.button_count):
             self.pressed.append(False)
@@ -61,7 +63,7 @@ class HumanCtrlr(Ctrlr):
         for idx in range(active_rows):
             # x = self.beat_time*44/self.beat_duration + idx*22
             x = 48+self.beat_time*46/self.beat_duration
-            y = 500-idx*46
+            y = 500-(self.current_row+idx)*46
             draw_polygon_outline(screen, (255, 255, 255), 8, 24, (x, y))
 
     def tick(self, delta):
@@ -69,7 +71,14 @@ class HumanCtrlr(Ctrlr):
         self.beat_time += delta*1000
         if self.beat_time >= 16*self.beat_duration:
             self.beat_time -= 16*self.beat_duration
+            self.iteration = self.iteration + 1
+            self.dirty_iteration = True
         self.current_beat = floor(self.beat_time/self.beat_duration)
 
         if last_beat != self.current_beat:
             self.dirty_beat = True
+
+    def post_tick(self):
+        self.dirty_button = False
+        self.dirty_beat = False
+        self.dirty_iteration = False

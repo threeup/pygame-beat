@@ -33,6 +33,7 @@ def main():
     world = WorldCtrlr()
     music = MusicCtrlr()
     world.setup(SCREEN_WIDTH, SCREEN_HEIGHT)
+    music.load_sounds(human.current_row)
 
     while boss.running:
         # Scan the buttons
@@ -40,6 +41,22 @@ def main():
             boss.handle_event(event)
             human.handle_event(event)
 
+        
+        delta = 1.0 / 60.0
+        steps = 1
+        for _ in range(steps):
+            world.tick(delta)
+            human.tick(delta)
+
+        if human.dirty_iteration:
+            print(human.iteration)
+            if human.iteration % 12 == 0:
+                world.clearall()
+            if human.iteration % 2 == 0:
+                human.current_row = (human.current_row + 1) % 3
+                music.stopall()
+                music.load_sounds(human.current_row)
+            
 
         if human.dirty_beat:
             row = human.current_row
@@ -63,18 +80,15 @@ def main():
                     world.mark(row,step,idx)
 
 
-        
-        delta = 1.0 / 60.0
-        steps = 1
-        for _ in range(steps):
-            world.tick(delta)
-            human.tick(delta)
-
         # Draw stuff
         world.draw(screen)
         human.draw(screen)
 
         pygame.display.update()
+
+        
+        for _ in range(steps):
+            human.post_tick()
 
 
 
