@@ -27,13 +27,15 @@ class MusicCtrlr(Ctrlr):
         self.current_sounds.append(
             pygame.mixer.Sound('audio/cymbal.ogg'))  
         self.current_sounds.append(pygame.mixer.Sound('audio/clap.ogg'))  
+
         self.current_sounds.append(pygame.mixer.Sound(
-            'audio/electricsnare.ogg'))  
+            'audio/pulse-motive-2.ogg'))  
         self.current_sounds.append(
-            pygame.mixer.Sound('audio/cabasa.ogg'))  
+            pygame.mixer.Sound('audio/slightly-brassy-chord.ogg'))  
         self.current_sounds.append(
-            pygame.mixer.Sound('audio/closehihat.ogg'))  
-        self.current_sounds.append(pygame.mixer.Sound('audio/hiconga.ogg'))
+            pygame.mixer.Sound('audio/pulse-sound.ogg'))  
+        self.current_sounds.append(pygame.mixer.Sound('audio/pulse-thing-2.ogg'))
+
         self.current_sounds.append(pygame.mixer.Sound('audio/bassdrum.ogg'))
         self.current_sounds.append(pygame.mixer.Sound('audio/pedalhihat.ogg'))
         self.current_sounds.append(pygame.mixer.Sound('audio/closehihat.ogg'))

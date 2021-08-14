@@ -45,20 +45,28 @@ class AnswerCtrlr(Ctrlr):
     def make(self):
         for r in range(self.rows):
             for s in range(self.steps):
-                mode = 0
-                if r > 6:
-                    mode = random.randint(0,2)
-                elif r > 3:
-                    mode = random.randint(0,1)
-                elif s % 2 == 0:
-                    mode = random.randint(0,1)
+                mode = r % 4
                 if mode == 0:
-                    self.answer[r][s] = 0
+                    # beat every other
+                    if s%2==1:
+                        col = random.randint(0,3)
+                        self.answer[r][s] = 1 << col
                 elif mode == 1:
+                    # long pulse
+                    if s%4==0:
+                        col = random.randint(0,3)
+                        self.answer[r][s] = 1 << col
+                    elif s>0 and s%4!=3:
+                        self.answer[r][s] = self.answer[r][s-1]
+                    else:
+                        self.answer[r][s] = 0
+                elif mode == 2:
                     col = random.randint(0,3)
                     self.answer[r][s] = 1 << col
                 else:
-                    self.answer[r][s] = random.randint(0,15)
+                    if s%2==0:
+                        self.answer[r][s] = random.randint(0,15)
+                    
                     
 
     def draw(self, screen):
