@@ -1,10 +1,11 @@
-from worldctrlr import WorldCtrlr
 import pygame
 import os
+from math import floor
 from bossctrlr import BossCtrlr
 from humanctrlr import HumanCtrlr
-from worldctrlr import WorldCtrlr
+from canvasctrlr import CanvasCtrlr
 from musicctrlr import MusicCtrlr
+from answerctrlr import AnswerCtrlr
 
 
 #os.putenv('SDL_FBDEV', '/dev/fb0')
@@ -30,10 +31,12 @@ def main():
     # controller
     human = HumanCtrlr()
     boss = BossCtrlr()
-    world = WorldCtrlr()
+    canvas = CanvasCtrlr()
     music = MusicCtrlr()
-    world.setup(SCREEN_WIDTH, SCREEN_HEIGHT)
-    music.load_sounds(human.current_row)
+    answer = AnswerCtrlr()
+    music.setup(SCREEN_WIDTH, SCREEN_HEIGHT)
+    answer.make()
+    music.load_sounds()
 
     while boss.running:
         # Scan the buttons
@@ -41,58 +44,57 @@ def main():
             boss.handle_event(event)
             human.handle_event(event)
 
-        
         delta = 1.0 / 60.0
         steps = 1
         for _ in range(steps):
-            world.tick(delta)
+            canvas.tick(delta)
             human.tick(delta)
 
         if human.dirty_iteration:
-            print(human.iteration)
-            if human.iteration % 16 == 0:
-                world.clearall()
-            if human.iteration % 2 == 0:
-                human.current_row = (human.current_row + 1) % 8
+            if canvas.check_answer(human.current_row, answer.answer):
+                human.current_row = human.current_row + 1
+                if human.current_row == 16:
+                    canvas.clearall()
+                    answer.make()
+                    human.current_row = 0
+                canvas.current_row = human.current_row
+                answer.current_row = human.current_row
                 music.stopall()
-                music.load_sounds(human.current_row % 3)
-            
 
         if human.dirty_beat:
             row = human.current_row
             step = human.current_beat
-            val = world.read(row,step)
-            for idx in range(human.button_count):
-                if human.pressed[idx]:
-                    world.mark(row,step,idx)
-                    music.play(idx)
-                elif val & (1 << idx):
-                    music.play(idx)
-                else:
-                    music.stop(idx)
+            base_row = 4*floor(row/4)
+            for r in range(base_row, base_row+4):
+                val = canvas.read(r, step)
+                for idx in range(4):
+                    if r == row and human.pressed[idx]:
+                        canvas.mark(row, step, idx)
+                        music.play(r, idx)
+                    elif val & (1 << idx):
+                        music.play(r, idx)
+                    else:
+                        music.stop(r, idx)
         elif human.dirty_button:
             row = human.current_row
             step = human.current_beat
-            world.clear(row,step)
-            for idx in range(human.button_count):
+            canvas.clear(row, step)
+            for idx in range(4):
                 if human.pressed[idx]:
-                    music.play(idx)
-                    world.mark(row,step,idx)
-
+                    music.play(row, idx)
+                    canvas.mark(row, step, idx)
 
         # Draw stuff
-        world.draw(screen)
+        music.draw(screen)
+        answer.draw(screen)
+        canvas.draw(screen)
         human.draw(screen)
 
         pygame.display.update()
 
-        
         for _ in range(steps):
             human.post_tick()
 
 
-
 if __name__ == "__main__":
     main()
-
-

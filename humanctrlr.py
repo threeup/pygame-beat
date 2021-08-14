@@ -9,21 +9,21 @@ def draw_polygon(surface, color, vertex_count, radius, position):
     x, y = position
     verts = []
     for i in range(n):
-        deg = 2 * pi * i / n + 0.125*pi
+        deg = 2 * pi * i / n + 0.5*pi
         verts.append((x + r * cos(deg), y + r * sin(deg)))
     pygame.draw.polygon(surface, color, verts)
 
 
-def draw_polygon_outline(surface, color, vertex_count, radius, position):
+def draw_polygon_outline(surface, color, vertex_count, radius, position, width):
 
     n, r = vertex_count, radius
     x, y = position
     verts = []
     for i in range(n):
-        deg = 2 * pi * i / n + 0.125*pi
+        deg = 2 * pi * i / n + 0.5*pi
         verts.append((x + r * cos(deg), y + r * sin(deg)))
 
-    pygame.draw.lines(surface, color, True, verts, 4)
+    pygame.draw.lines(surface, color, True, verts, width)
 
 
 class HumanCtrlr(Ctrlr):
@@ -59,20 +59,29 @@ class HumanCtrlr(Ctrlr):
                     self.pressed[idx] = False
 
     def draw(self, screen):
-        active_rows = 1
-        for idx in range(active_rows):
-            # x = self.beat_time*44/self.beat_duration + idx*22
-            x = 48+self.beat_time*46/self.beat_duration
-            y = 500-(self.current_row+idx)*46
-            draw_polygon_outline(screen, (255, 255, 255), 8, 24, (x, y))
+        s = self.current_beat
+        base_row = 4*floor(self.current_row/4)
+        for r in range(base_row, base_row+4):
+            xoffset = r%4*23
+            x = 22+s*46+xoffset
+            y = 540-r*39
+            color = (55, 55, 55)
+            width = 2
+            outline = 22
+            if r == self.current_row:
+                color = (255, 255, 255)
+                width = 4
+                outline = 26
+            draw_polygon_outline(screen, color, 6, outline, (x, y), width)
 
     def tick(self, delta):
-        last_beat = round(self.beat_time/self.beat_duration)
         self.beat_time += delta*1000
         if self.beat_time >= 16*self.beat_duration:
             self.beat_time -= 16*self.beat_duration
             self.iteration = self.iteration + 1
             self.dirty_iteration = True
+        
+        last_beat = self.current_beat
         self.current_beat = floor(self.beat_time/self.beat_duration)
 
         if last_beat != self.current_beat:
@@ -82,3 +91,4 @@ class HumanCtrlr(Ctrlr):
         self.dirty_button = False
         self.dirty_beat = False
         self.dirty_iteration = False
+
