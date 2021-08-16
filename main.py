@@ -18,6 +18,7 @@ def main():
     '''main'''
     pygame.init()
     pygame.mouse.set_visible(False)
+    clock = pygame.time.Clock()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     screen.fill((0, 0, 0))
     pygame.joystick.init()
@@ -35,7 +36,7 @@ def main():
     music = MusicCtrlr()
     answer = AnswerCtrlr()
     music.setup(SCREEN_WIDTH, SCREEN_HEIGHT)
-    answer.make()
+    answer.make_answer()
     music.load_sounds()
 
     while boss.running:
@@ -44,18 +45,20 @@ def main():
             boss.handle_event(event)
             human.handle_event(event)
 
-        delta = 1.0 / 60.0
-        steps = 1
-        for _ in range(steps):
-            canvas.tick(delta)
-            human.tick(delta)
+        delta = clock.tick(30)/1000.0
 
-        if human.dirty_iteration:
+        canvas.tick(delta)
+        human.tick(delta)
+
+
+        if human.skip_level:
+            canvas.mark_row(human.current_row, answer.answer)
+        if human.skip_level or human.dirty_iteration:
             if canvas.check_answer(human.current_row, answer.answer):
                 human.current_row = human.current_row + 1
-                if human.current_row == 16:
+                if human.current_row == 12:
                     canvas.clearall()
-                    answer.make()
+                    answer.make_answer()
                     human.current_row = 0
                 canvas.current_row = human.current_row
                 answer.current_row = human.current_row
@@ -84,6 +87,7 @@ def main():
                     music.play(row, idx)
                     canvas.mark(row, step, idx)
 
+
         # Draw stuff
         music.draw(screen)
         answer.draw(screen)
@@ -92,8 +96,7 @@ def main():
 
         pygame.display.update()
 
-        for _ in range(steps):
-            human.post_tick()
+        human.post_tick()
 
 
 if __name__ == "__main__":

@@ -12,7 +12,7 @@ class MusicCtrlr(Ctrlr):
         Ctrlr.__init__(self)
 
     def setup(self, screen_width, screen_height):
-        raw_bg_img = pygame.image.load("hexbg.jpg")
+        raw_bg_img = pygame.image.load("hexgame.jpg")
         self.bg = pygame.transform.scale(
             raw_bg_img, (screen_width, screen_height))
 
@@ -20,32 +20,23 @@ class MusicCtrlr(Ctrlr):
         self.current_sounds = []
         self.is_playing = []
 
-        self.current_sounds.append(
-            pygame.mixer.Sound('audio/bassdrum.ogg'))  
-        self.current_sounds.append(pygame.mixer.Sound(
-            'audio/acousticsnare.ogg'))  
-        self.current_sounds.append(
-            pygame.mixer.Sound('audio/cymbal.ogg'))  
-        self.current_sounds.append(pygame.mixer.Sound('audio/clap.ogg'))  
+        drum_sound_files = ['audio/bassdrum.ogg','audio/acousticsnare.ogg','audio/cymbal.ogg','audio/clap.ogg']
+        melody_sound_files = ['audio/daaaadeedooFMinor.ogg','audio/duhduhA.ogg','audio/lowvibesBb.ogg','audio/lowvibesF.ogg']
+        flare_sound_files = ['audio/flutepop.ogg','audio/flutebreathyFMin.ogg','audio/flutepulseG.ogg','audio/fluteunderwater.ogg']
+        extra_sound_files = ['audio/scifihigh.ogg','audio/scifilow.ogg','audio/bellsdusty.ogg','audio/swellingnoise.ogg']
 
-        self.current_sounds.append(pygame.mixer.Sound(
-            'audio/pulse-motive-2.ogg'))  
-        self.current_sounds.append(
-            pygame.mixer.Sound('audio/slightly-brassy-chord.ogg'))  
-        self.current_sounds.append(
-            pygame.mixer.Sound('audio/pulse-sound.ogg'))  
-        self.current_sounds.append(pygame.mixer.Sound('audio/pulse-thing-2.ogg'))
+        for f in drum_sound_files:
+            self.current_sounds.append(pygame.mixer.Sound(f))
+        
+        for f in melody_sound_files:
+            self.current_sounds.append(pygame.mixer.Sound(f))
+            
+        for f in flare_sound_files:
+            self.current_sounds.append(pygame.mixer.Sound(f))
+            
+        for f in extra_sound_files:
+            self.current_sounds.append(pygame.mixer.Sound(f))
 
-        self.current_sounds.append(pygame.mixer.Sound('audio/bassdrum.ogg'))
-        self.current_sounds.append(pygame.mixer.Sound('audio/pedalhihat.ogg'))
-        self.current_sounds.append(pygame.mixer.Sound('audio/closehihat.ogg'))
-        self.current_sounds.append(pygame.mixer.Sound('audio/cymbal.ogg'))
-        self.current_sounds.append(
-            pygame.mixer.Sound('audio/acousticsnare.ogg'))
-        self.current_sounds.append(pygame.mixer.Sound('audio/cabasa.ogg'))
-        self.current_sounds.append(pygame.mixer.Sound('audio/closehihat.ogg'))
-        self.current_sounds.append(
-            pygame.mixer.Sound('audio/electricsnare.ogg'))
 
         for idx in range(len(self.current_sounds)):
             self.current_sounds[idx].set_volume(0.25)
@@ -57,14 +48,12 @@ class MusicCtrlr(Ctrlr):
     def play(self, row, idx):
         slot = (row % 4)*4+idx
         if not self.is_playing[slot]:
-            #print("play", row, " ", idx)
             self.current_sounds[slot].play()
             self.is_playing[slot] = True
 
     def stop(self, row, idx):
         slot = (row % 4)*4+idx
         if self.is_playing[slot]:
-            #print("stop", row, " ", idx)
             self.current_sounds[slot].stop()
             self.is_playing[slot] = False
 

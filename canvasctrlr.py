@@ -2,15 +2,11 @@
 from math import sin, cos, pi
 import pygame
 from ctrlr import Ctrlr
+from lib import coord_to_draw, val_to_color, polygon_verts
 
 
 def draw_polygon(surface, color, vertex_count, radius, position):
-    n, r = vertex_count, radius
-    x, y = position
-    verts = []
-    for i in range(n):
-        deg = 2 * pi * i / n + 0.5*pi
-        verts.append((x + r * cos(deg), y + r * sin(deg)))
+    verts = polygon_verts(vertex_count, radius, position)
     pygame.draw.polygon(surface, color, verts)
 
 
@@ -32,30 +28,18 @@ class CanvasCtrlr(Ctrlr):
                 row.append(0)
             self.grid.append(row)
 
-
     def draw(self, screen):
-        rowcount = min(self.current_row+1,self.rows)
-        for r in range(rowcount):
-            for s in range(self.steps):
-                xoffset = r%4*23
-                x = 22+s*46+xoffset
-                y = 540-r*39
-                val = self.grid[r][s]
-                color = [0,0,0]
-                if val & 1:
-                    color[0]=250
-                if val & 2:
-                    color[0]=max(color[0], 180)
-                    color[1]=max(color[1], 180)
-                if val & 4:
-                    color[1]=250
-                if val & 8:
-                    color[2]=250
+        rowcount = min(self.current_row+1, self.rows)
+        for row in range(rowcount):
+            for step in range(self.steps):
+                (x, y) = coord_to_draw(row+2, step+2, 2)
+                val = self.grid[row][step]
+                color = val_to_color(val, False)
                 draw_polygon(screen, tuple(color), 6, 16, (x, y))
 
     def mark(self, row, step, bit):
         self.grid[row][step] |= (1 << bit)
-    
+
     def clear(self, row, step):
         self.grid[row][step] = 0
 
@@ -66,6 +50,10 @@ class CanvasCtrlr(Ctrlr):
 
     def read(self, row, step):
         return self.grid[row][step]
+
+    def mark_row(self, row, answer):
+        for s in range(self.steps):
+            self.grid[row][s] = answer[row][s]
 
     def check_answer(self, row, answer):
         hit = 0
@@ -80,5 +68,5 @@ class CanvasCtrlr(Ctrlr):
                     miss += 1
             else:
                 hit += 1
-        print("hit",hit,"extra",extra,"miss",miss)
+        print("hit", hit, "extra", extra, "miss", miss)
         return miss == 0
