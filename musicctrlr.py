@@ -26,16 +26,24 @@ class MusicCtrlr(Ctrlr):
         extra_sound_files = ['audio/scifihigh.ogg','audio/scifilow.ogg','audio/bellsdusty.ogg','audio/swellingnoise.ogg']
 
         for f in drum_sound_files:
-            self.current_sounds.append(pygame.mixer.Sound(f))
+            snd = pygame.mixer.Sound(f)
+            snd.set_volume(0.30)
+            self.current_sounds.append(snd)
         
         for f in melody_sound_files:
-            self.current_sounds.append(pygame.mixer.Sound(f))
+            snd = pygame.mixer.Sound(f)
+            snd.set_volume(0.20)
+            self.current_sounds.append(snd)
             
         for f in flare_sound_files:
-            self.current_sounds.append(pygame.mixer.Sound(f))
+            snd = pygame.mixer.Sound(f)
+            snd.set_volume(0.15)
+            self.current_sounds.append(snd)
             
         for f in extra_sound_files:
-            self.current_sounds.append(pygame.mixer.Sound(f))
+            snd = pygame.mixer.Sound(f)
+            snd.set_volume(0.20)
+            self.current_sounds.append(snd)
 
 
         for idx in range(len(self.current_sounds)):
