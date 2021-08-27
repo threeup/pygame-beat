@@ -65,6 +65,8 @@ class CanvasCtrlr(Ctrlr):
                 if answer[row][s] == 0:
                     extra += 1
                 else:
+                    print("miss",s,answer[row][s])
+                    print('guess',self.grid[row][s])
                     miss += 1
             else:
                 hit += 1

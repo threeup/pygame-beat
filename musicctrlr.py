@@ -27,7 +27,7 @@ class MusicCtrlr(Ctrlr):
 
         for f in drum_sound_files:
             snd = pygame.mixer.Sound(f)
-            snd.set_volume(0.30)
+            snd.set_volume(0.35)
             self.current_sounds.append(snd)
         
         for f in melody_sound_files:
@@ -37,12 +37,12 @@ class MusicCtrlr(Ctrlr):
             
         for f in flare_sound_files:
             snd = pygame.mixer.Sound(f)
-            snd.set_volume(0.15)
+            snd.set_volume(0.12)
             self.current_sounds.append(snd)
             
         for f in extra_sound_files:
             snd = pygame.mixer.Sound(f)
-            snd.set_volume(0.20)
+            snd.set_volume(0.14)
             self.current_sounds.append(snd)
 
 

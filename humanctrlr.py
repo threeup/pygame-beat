@@ -32,7 +32,7 @@ class HumanCtrlr(Ctrlr):
         self.dirty_beat = False
         self.dirty_iteration = False
         self.skip_level = False
-        self.beat_duration = 1600
+        self.beat_duration = 800
         for _ in range(self.button_count):
             self.pressed.append(False)
 

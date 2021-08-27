@@ -93,10 +93,12 @@ class AnswerCtrlr(Ctrlr):
                         self.answer[r][s] = 1 << col
                 else:
                     if s % 2 == 1 or s % 4 == 0:
-                        col1 = random.randint(0, 3)
-                        col2 = random.randint(0, 3)
-                        bit1 = 1 << col1 if col1 != 1 else 0
-                        bit2 = 1 << col2 if col2 != 1 else 0
+                        col1 = random.randint(0, 2)
+                        col1 = col1+1 if col1 != 0 else col1
+                        col2 = random.randint(0, 2)
+                        col2 = col2+1 if col2 != 0 else col2
+                        bit1 = 1 << col1
+                        bit2 = 1 << col2
                         self.answer[r][s] = bit1 + bit2
 
     def draw_picture(self, screen, row, step, x, y):
