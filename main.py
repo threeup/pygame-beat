@@ -62,11 +62,12 @@ def main():
                     human.current_row = 0
                 canvas.current_row = human.current_row
                 answer.current_row = human.current_row
+                human.beat_duration = human.beat_duration - 50
                 music.stopall()
 
         if human.dirty_beat:
             row = human.current_row
-            step = human.current_beat
+            step = human.current_beat 
             base_row = 4*floor(row/4)
             for r in range(base_row, base_row+4):
                 val = canvas.read(r, step)
