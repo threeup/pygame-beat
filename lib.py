@@ -18,13 +18,23 @@ def val_to_color(val, muted):
     color = [0, 0, 0]
     if val & 1:
         color[0] = 250
-    if val & 2:
-        color[0] = max(color[0], 220)
-        color[1] = max(color[1], 220)
     if val & 4:
         color[1] = 250
     if val & 8:
         color[2] = 250
+        
+    if val & 2:
+        if val & 1:
+            color[0] = 250
+            color[1] = 150
+            color[2] = 60
+        elif val & 4:
+            color[0] = 150
+            color[1] = 230
+            color[2] = 30
+        else:
+            color[0] = 250
+            color[1] = 250
     if muted:
         color[0] *= 0.4
         color[1] *= 0.4

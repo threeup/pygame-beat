@@ -88,18 +88,35 @@ class AnswerCtrlr(Ctrlr):
                     else:
                         self.answer[r][s] = 0
                 elif mode == 2:
-                    if s % 2 == 0 or (s+1) % 4 == 0:
+                    if s % 4 == 0:
                         col = random.randint(0, 3)
                         self.answer[r][s] = 1 << col
-                else:
-                    if s % 2 == 1 or s % 4 == 0:
-                        col1 = random.randint(0, 2)
-                        col1 = col1+1 if col1 != 0 else col1
-                        col2 = random.randint(0, 2)
-                        col2 = col2+1 if col2 != 0 else col2
+                    elif s % 4==2:
+                        col1 = random.randint(0, 3)
+                        while True:
+                            col2 = random.randint(0, 3)
+                            if col2 != col1:
+                                break
+                        
                         bit1 = 1 << col1
                         bit2 = 1 << col2
                         self.answer[r][s] = bit1 + bit2
+                else:
+                    if s % 4 == 0:
+                        col = random.randint(0, 3)
+                        self.answer[r][s] = 1 << col
+                    elif s % 2 == 1: 
+                        col1 = random.randint(0, 3)
+                        while True:
+                            col2 = random.randint(0, 3)
+                            if col2 != col1:
+                                break
+                        
+                        bit1 = 1 << col1
+                        bit2 = 1 << col2
+                        self.answer[r][s] = bit1 + bit2
+
+                        
 
     def draw_picture(self, screen, row, step, x, y):
         val = self.picture[row][step]
