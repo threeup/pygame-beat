@@ -37,12 +37,12 @@ class MusicCtrlr(Ctrlr):
             
         for f in flare_sound_files:
             snd = pygame.mixer.Sound(f)
-            snd.set_volume(0.12)
+            snd.set_volume(0.03)
             self.current_sounds.append(snd)
             
         for f in extra_sound_files:
             snd = pygame.mixer.Sound(f)
-            snd.set_volume(0.14)
+            snd.set_volume(0.04)
             self.current_sounds.append(snd)
 
 

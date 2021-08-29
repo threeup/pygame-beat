@@ -73,7 +73,7 @@ class AnswerCtrlr(Ctrlr):
                     # beat every other
                     if s % 2 == 1:
                         col = random.randint(0, 3)
-                        self.answer[r][s] = 1 << col
+                        self.answer[r][s] = 5#1 << col
                     else:
                         col = random.randint(0, 6)
                         if col <= 3:

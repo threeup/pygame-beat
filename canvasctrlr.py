@@ -49,11 +49,25 @@ class CanvasCtrlr(Ctrlr):
                 self.clear(row, step)
 
     def read(self, row, step):
+        
+        if row >= len(self.grid):
+            print("bad row",row)
+            return 0
+        if row >= len(self.grid[row]):
+            print("bad step",step)
+            return 0
         return self.grid[row][step]
 
     def mark_row(self, row, answer):
+        if row >= len(self.grid) or row >= len(answer):
+            print("bad row",row)
+            return
+        
         for s in range(self.steps):
-            self.grid[row][s] = answer[row][s]
+            if s >= len(self.grid[row]) or s >= len(answer[row]):    
+                print("bads",s)        
+            else:
+                self.grid[row][s] = answer[row][s]
 
     def check_answer(self, row, answer):
         hit = 0
@@ -61,12 +75,15 @@ class CanvasCtrlr(Ctrlr):
         miss = 0
         for s in range(self.steps):
             if self.grid[row][s] != answer[row][s]:
-                self.grid[row][s] = 0
-                if answer[row][s] == 0:
-                    extra += 1
+                if self.grid[row][s] == 5 and answer[row][s] == 2 or self.grid[row][s] == 2 and answer[row][s] == 5:
+                    hit += 1
                 else:
-                    print("miss",s,answer[row][s])
-                    miss += 1
+                    self.grid[row][s] = 0
+                    if answer[row][s] == 0:
+                        extra += 1
+                    else:
+                        print("miss",s,answer[row][s])
+                        miss += 1
             else:
                 hit += 1
         print("hit", hit, "extra", extra, "miss", miss)
