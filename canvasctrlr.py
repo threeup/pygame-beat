@@ -50,10 +50,10 @@ class CanvasCtrlr(Ctrlr):
 
     def read(self, row, step):
         
-        if row >= len(self.grid):
+        if row < 0 or row >= len(self.grid):
             print("bad row",row)
             return 0
-        if row >= len(self.grid[row]):
+        if step < 0 or step >= len(self.grid[row]):
             print("bad step",step)
             return 0
         return self.grid[row][step]

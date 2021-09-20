@@ -30,7 +30,7 @@ def val_to_color(val, muted):
             color[2] = 60
         elif val & 4:
             color[0] = 150
-            color[1] = 230
+            color[1] = 220
             color[2] = 30
         else:
             color[0] = 250

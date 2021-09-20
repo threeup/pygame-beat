@@ -22,8 +22,10 @@ class MusicCtrlr(Ctrlr):
 
         drum_sound_files = ['audio/bassdrum.ogg','audio/acousticsnare.ogg','audio/cymbal.ogg','audio/clap.ogg']
         melody_sound_files = ['audio/daaaadeedooFMinor.ogg','audio/duhduhA.ogg','audio/lowvibesBb.ogg','audio/lowvibesF.ogg']
-        flare_sound_files = ['audio/flutepop.ogg','audio/flutebreathyFMin.ogg','audio/flutepulseG.ogg','audio/fluteunderwater.ogg']
-        extra_sound_files = ['audio/scifihigh.ogg','audio/scifilow.ogg','audio/bellsdusty.ogg','audio/swellingnoise.ogg']
+        # flare_sound_files = ['audio/flutepop.ogg','audio/flutebreathyFMin.ogg','audio/flutepulseG.ogg','audio/fluteunderwater.ogg']
+        flare_sound_files = ['audio/closehihat.ogg','audio/hiconga.ogg','audio/electricsnare.ogg','audio/bassdrum.ogg']
+        # extra_sound_files = ['audio/scifihigh.ogg','audio/scifilow.ogg','audio/bellsdusty.ogg','audio/swellingnoise.ogg']
+        extra_sound_files = ['audio/scifihigh.ogg','audio/scifilow.ogg','audio/lowvibesF.ogg','audio/swellingnoise.ogg']
 
         for f in drum_sound_files:
             snd = pygame.mixer.Sound(f)
